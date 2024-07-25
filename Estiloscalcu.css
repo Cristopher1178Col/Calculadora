@@ -1,14 +1,16 @@
-body {
+body { background-image: url(E9BB7A8WUAIQNay.jfif);
     font-family: Arial, sans-serif;
     text-align: center;
 }
 .calculator {
     margin: 20px auto;
     width: 300px;
-    border: 1px solid #ccc;
+    border: 1px solid #000000;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    color: white;
+    background-color: #061fac;
 }
 .calculator input[type="number"] {
     width: 80%;
@@ -17,6 +19,7 @@ body {
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 3px;
+    
 }
 .calculator input[type="radio"] {
     margin: 0 5px;
@@ -33,6 +36,7 @@ body {
     margin-top: 10px;
     cursor: pointer;
     border-radius: 3px;
+    color: white;
 }
 .calculator button:hover {
     background-color: #45a049;

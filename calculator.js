@@ -1,11 +1,17 @@
 function calcular() {
-    // Obtener los valores de los campos
     var num1 = parseFloat(document.getElementById('num1').value);
     var num2 = parseFloat(document.getElementById('num2').value);
-    var operacion = document.querySelector('input[name="operacion"]:checked').value;
+    var operacion = document.querySelector('input[name="operacion"]:checked');
     var resultado;
-
-    // Realizar la operación correspondiente
+    if (!operacion) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Por favor, ingrese los valores y seleccione la operacion.',
+        });
+        return;
+    }
+    operacion = operacion.value;
     switch (operacion) {
         case 'suma':
             resultado = num1 + num2;
@@ -24,7 +30,9 @@ function calcular() {
             }
             break;
         default:
-            resultado = 'Error: seleccione una operación';
+            alert('Operación no reconocida.');
+            return;
     }
-    document.getElementById('resultado').textContent = 'Resultado: ' + resultado;
+    document.getElementById('resultado').value= resultado;
 }
+
