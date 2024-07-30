@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclos</title>
+</head>
+<body>
+    <script>
+        let Pares = 0, Impares = 0, SumaPares = 0, SumaImpares = 0;
+        let rangoInicio = 1; 
+        let rangoFin = 10;  
+
+        for (let f = rangoInicio; f <= rangoFin; f++) {
+            if (f % 2 == 0) {
+                SumaPares += f;
+                Pares += 1;
+            } else {
+                SumaImpares += f;
+                Impares += 1;
+            }
+        }
+
+        let promedioPares = Pares > 0 ? SumaPares / Pares : 0;
+        let promedioImpares = Impares > 0 ? SumaImpares / Impares : 0;
+
+        document.write("Cantidad Pares: " + Pares + "<br>");
+        document.write("Cantidad Impares: " + Impares + "<br>");
+        document.write("Suma Pares: " + SumaPares + "<br>");
+        document.write("Suma Impares: " + SumaImpares + "<br>");
+        document.write("Promedio Pares: " + promedioPares.toFixed(2) + "<br>");
+        document.write("Promedio Impares: " + promedioImpares.toFixed(2) + "<br>");
+        
+    </script>
+</body>
+</html>

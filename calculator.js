@@ -12,27 +12,37 @@ function calcular() {
         return;
     }
     operacion = operacion.value;
-    switch (operacion) {
-        case 'suma':
-            resultado = num1 + num2;
-            break;
-        case 'resta':
-            resultado = num1 - num2;
-            break;
-        case 'multiplicacion':
-            resultado = num1 * num2;
-            break;
-        case 'division':
-            if (num2 !== 0) {
-                resultado = num1 / num2;
-            } else {
-                resultado = 'Error: división por cero';
-            }
-            break;
-        default:
-            alert('Operación no reconocida.');
-            return;
+    var continuar = true;
+    while (continuar) {
+        switch (operacion) {
+            case 'suma':
+                resultado = num1 + num2;
+                continuar = false;
+                break;
+            case 'resta':
+                resultado = num1 - num2;
+                continuar = false;
+                break;
+            case 'multiplicacion':
+                resultado = num1 * num2;
+                continuar = false;
+                break;
+            case 'division':
+                if (num2 !== 0) {
+                    resultado = num1 / num2;
+                    continuar = false;
+                } else {
+                    resultado = 'Error: división por cero';
+                    continuar = false;
+                }
+                break;
+            default:
+                alert('Operación no reconocida.');
+                continuar = false;
+                break;
+        }
     }
-    document.getElementById('resultado').value= resultado;
+    document.getElementById('resultado').value = resultado;
 }
+
 
